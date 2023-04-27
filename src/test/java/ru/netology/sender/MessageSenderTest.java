@@ -53,6 +53,5 @@ public class MessageSenderTest {
 
         String message = messageSender.send(map);
         Assertions.assertEquals(expected, message);
-
     }
 }
