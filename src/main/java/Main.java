@@ -5,8 +5,8 @@ import ru.netology.geo.GeoService;
 import ru.netology.geo.GeoServiceImpl;
 import ru.netology.i18n.LocalizationService;
 import ru.netology.i18n.LocalizationServiceImpl;
-import ru.netology.MessageSender;
-import ru.netology.MessageSenderImpl;
+import ru.netology.sender.MessageSender;
+import ru.netology.sender.MessageSenderImpl;
 
 public class Main {
 
