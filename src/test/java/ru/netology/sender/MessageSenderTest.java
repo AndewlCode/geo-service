@@ -25,10 +25,10 @@ public class MessageSenderTest {
                 .thenReturn(new Location("Moscow", Country.RUSSIA, "Lenina", 15));
 
         LocalizationService localizationService = Mockito.mock(LocalizationService.class);
-        Mockito.when(localizationService.locale(Country.RUSSIA)).thenReturn("Привет");
+        Mockito.when(localizationService.locale(Country.RUSSIA)).thenReturn("Добро пожаловать");
 
         MessageSender messageSender = new MessageSenderImpl(geoService, localizationService);
-        String expected = "Привет";
+        String expected = "Добро пожаловать";
 
         String message = messageSender.send(map);
         Assertions.assertEquals(expected, message);
@@ -46,10 +46,10 @@ public class MessageSenderTest {
                 .thenReturn(new Location("New York", Country.USA, " 10th Avenue", 32));
 
         LocalizationService localizationService = Mockito.mock(LocalizationService.class);
-        Mockito.when(localizationService.locale(Country.USA)).thenReturn("Hello");
+        Mockito.when(localizationService.locale(Country.USA)).thenReturn("Welcome");
 
         MessageSender messageSender = new MessageSenderImpl(geoService, localizationService);
-        String expected = "Hello";
+        String expected = "Welcome";
 
         String message = messageSender.send(map);
         Assertions.assertEquals(expected, message);
